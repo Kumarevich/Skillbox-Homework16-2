@@ -1,13 +1,9 @@
 #include <iostream>
+#include <string>
 
 float summation (int fractional, int integral) {
-    int temp = fractional;
-    int count = 0;
-    while (temp != 0) {
-        temp /= 10;
-        ++count;
-    }
-    float result = integral + (fractional / pow(10.0f, count));
+    std::string frac = std::to_string(fractional);
+    float result = integral + (fractional / pow(10.0f, frac.length()));
     return result;
 }
 
