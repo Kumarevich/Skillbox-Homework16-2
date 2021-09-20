@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
 
-float summation (int fractional, int integral) {
-    std::string frac = std::to_string(fractional);
-    float result = integral + (fractional / pow(10.0f, frac.length()));
-    return result;
+double summation (int fractional, int integral) {
+    std::string full = std::to_string(integral);
+    full += '.';
+    full += std::to_string(fractional);
+    return std::stod(full);
 }
 
 int main() {
